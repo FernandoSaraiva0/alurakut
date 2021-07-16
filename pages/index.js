@@ -1,6 +1,6 @@
 import MainGrid from '../src/components/MainGrid'
 import Box from '../src/components/Box'
-import {AlurakutMenu, OrkutNostalgicIconSet} from '../src/lib/AlurakutComons'
+import {AlurakutMenu, AlurakutProfileSidebarMenuDefault, OrkutNostalgicIconSet} from '../src/lib/AlurakutComons'
 import {ProfileRelationsBoxWrapper} from '../src/components/ProfileRelations'
 
 
@@ -8,6 +8,17 @@ function ProfileSidebar(propriedades) {
   return(
       <Box>
         <img src={`https://github.com/${propriedades.User}.png`} /> 
+        <hr />
+        <a className="boxLink" href={`https://github.com/${propriedades.User}`}>
+           {/* call user name */}
+           @{propriedades.User}
+        </a>
+         
+        <hr />
+
+        {/* sidebar pre-conf */}
+        <AlurakutProfileSidebarMenuDefault /> 
+        
       </Box>
   )
 }
